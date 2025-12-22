@@ -148,6 +148,15 @@ BASE_CONOCIMIENTO = [
         "respuesta": "🏠 **Usurpación (Art. 202 CP):**\n\nDespojar a alguien de su inmueble usando violencia o engaño.\n\n⚖️ **Pena:** 2 a 5 años. \n⚠️ **Defensa Posesoria (Art. 920 CC):** Puedes sacar a los invasores tú mismo (sin juez) si lo haces dentro de los **15 días** de enterarte, usando la fuerza proporcional."
     },
 
+    {
+        "tema": "Robo (General)",
+        "keywords": [
+            "que pasa si robo", "si robo", "robar es delito", "pena por robar", 
+            "cometer un robo", "robo simple", "robo"
+        ],
+        "respuesta": "👮 **El Delito de Robo (Art. 188 CP):**\n\nSi te apoderas de un bien ajeno usando **violencia o amenaza** contra la persona, cometes ROBO.\n\n⚖️ **Pena Base:** Cárcel efectiva de **3 a 8 años**.\n⚠️ **Diferencia:** Si NO usas violencia (solo te lo llevas sin que se den cuenta), es **Hurto** (pena menor). Si usas armas, es **Robo Agravado** (pena mucho mayor)."
+    },
+
     # ==================== DELITOS CONTRA VIDA Y CUERPO ====================
     {
         "tema": "Homicidio Culposo (Accidentes)",
@@ -189,6 +198,94 @@ BASE_CONOCIMIENTO = [
         ],
         "respuesta": "🤕 **Lesiones Graves (Art. 121 CP):**\n\nDaño que pone en peligro la vida, mutila o desfigura.\n\n⚖️ **Pena:** 4 a 8 años. Si la víctima muere, **12 a 20 años**."
     },
+
+    {
+        "tema": "Homicidio y Asesinato (General)",
+        "keywords": [
+            "si mato a alguien", "que pasa si asesino", "pena por asesinato" ,"matar" 
+            "asesinar a una persona", "homicidio simple", "homicidio calificado",
+            "matar a alguien", "asesinato"
+        ],
+        "respuesta": "⚰️ **Homicidio y Asesinato (Diferencia):**\n\n* **Homicidio Simple (Art. 106):** Matar a otro sin agravantes (ej: en una pelea). Pena: **6 a 20 años**.\n* **Asesinato (Homicidio Calificado - Art. 108):** Si matas con crueldad, por lucro, por placer, con veneno o alevosía (traición). Pena: **No menor de 15 años**."
+    },
+
+    {
+        "tema": "Agresión Física / Golpes (General)",
+        "keywords": [
+            "golpear", "golpee", "le pegue", "puñete", "cachetada", "agredir", "golpie", 
+            "pelea callejera", "tirar golpe", "golpiza", "moretones", "pegarle"
+        ],
+        "respuesta": "👊 **Agresión y Lesiones (Art. 122 CP):**\n\nGolpear a alguien es delito, y la pena depende del daño causado:\n\n1. **Faltas contra la persona:** Si el daño requiere menos de 10 días de asistencia médica (Sanción: Servicios Comunitarios).\n2. **Lesiones Leves:** Si requiere de 10 a 30 días de descanso (Pena: **2 a 5 años**).\n\n⚠️ **¡Importante!** Si golpeas a una **mujer o integrante del grupo familiar**, la pena es más severa y casi siempre efectiva (cárcel), aunque la lesión sea mínima."
+    },
+
+    # ==================== DELITOS CONTRA LA LIBERTAD SEXUAL ====================
+    {
+        "tema": "Violación Sexual (General)",
+        "keywords": [
+            "violacion", "violar", "abuso sexual", "forzar a tener sexo", 
+            "sin consentimiento", "me violaron", "sexo obligado"
+        ],
+        "respuesta": "🛑 **Violación Sexual (Art. 170 CP):**\n\nObligar a una persona a tener relaciones sexuales (vaginal, anal o bucal) usando violencia o amenaza, o aprovechándose de que no puede resistir (ej: estaba dormida o ebria).\n\n⚖️ **Pena:** Cárcel efectiva de **14 a 20 años**. Si hay agravantes (lesiones, crueldad), la pena sube."
+    },
+    {
+        "tema": "Violación de Menores (Cadena Perpetua)",
+        "keywords": [
+            "violar a un niño", "violar a una niña", "violar menor de edad", 
+            "abuso infantil", "violacion de menor", "pedofilo"
+        ],
+        "respuesta": "🚨 **Violación de Menor de Edad (Art. 173 CP):**\n\nEs uno de los delitos más graves en el Perú. Si la víctima es menor de **14 años**, NO importa si hubo 'consentimiento', siempre es delito.\n\n⚖️ **Pena:** **CADENA PERPETUA** (Cárcel de por vida). No hay beneficios penitenciarios."
+    },
+    {
+        "tema": "Tocamientos Indebidos",
+        "keywords": [
+            "me toco", "me manoseo", "tocamientos indebidos", "metio la mano", 
+            "toqueteo", "actos libidinosos"
+        ],
+        "respuesta": "✋ **Tocamientos Indebidos (Art. 176 CP):**\n\nRealizar tocamientos (manoseos) o actos libidinosos sobre el cuerpo de otra persona sin su consentimiento, sin llegar a la violación.\n\n⚖️ **Pena:** Cárcel de **3 a 6 años**. Si la víctima es menor de edad, la pena es mucho mayor (9 a 15 años)."
+    },
+    {
+        "tema": "Seducción de Menores (Engaño)",
+        "keywords": [
+            "seducir menor", "engañar adolescente", "enamorar menor para tener sexo", 
+            "seduccion", "estupro"
+        ],
+        "respuesta": "⚠️ **Seducción (Art. 175 CP):**\n\nTener relaciones sexuales con una persona de **14 a 18 años** (adolescente) mediante **engaño**.\n\n⚖️ **Pena:** Privativa de libertad de **3 a 5 años**. La ley protege la inexperiencia de los adolescentes frente a engaños de adultos."
+    },
+
+    {
+        "tema": "Acoso (Resumen de Tipos)",
+        "keywords": [
+            "acoso", "que es el acoso", "me estan acosando", "tipos de acoso", 
+            "diferencia acoso", "ley de acoso"
+        ],
+        "respuesta": "⚠️ **El Acoso es Delito (Tipos):**\n\nEn Perú, el acoso se castiga diferente según el contexto:\n\n1. **Acoso Sexual (Art. 176-B):** Si hay frases, tocamientos o propuestas de índole sexual no deseadas.\n2. **Stalking (Art. 151-A):** Si te vigilan, persiguen o buscan contacto insistentemente (sin fin sexual explícito, solo por obsesión/molestar).\n3. **Acoso Laboral (Hostilidad):** Si ocurre en el trabajo para aburrirte o perjudicarte.\n4. **Ciberacoso:** Si ocurre por redes sociales (agravante)."
+    },
+    
+    {
+        "tema": "Acoso / Stalking (Persecución)",
+        "keywords": [
+            "me acosan", "me persiguen", "me vigilan", "stalker", 
+            "me sigue a todos lados", "obsesionado conmigo", "acoso"
+        ],
+        "respuesta": "👀 **Delito de Acoso (Stalking - Art. 151-A CP):**\n\nEl que vigila, persigue, asedia o busca establecer contacto con una persona de forma continua contra su voluntad, alterando su vida diaria.\n\n⚖️ **Pena:** Privativa de libertad de **3 a 5 años**. \n⚠️ **Agravante:** Si el acosador es tu expareja o familiar, la pena sube hasta **7 años**."
+    },
+    {
+        "tema": "Acoso Sexual (General)",
+        "keywords": [
+            "acoso sexual", "propuestas indecentes", "me pide sexo", 
+            "insinuaciones sexuales", "hostigamiento sexual"
+        ],
+        "respuesta": "🛑 **Acoso Sexual (Art. 176-B CP):**\n\nEl que realiza vigilancia, persecución o asedio con fines lascivos (sexuales) no deseados.\n\n⚖️ **Pena:** **3 a 5 años** de cárcel. \n⚠️ **Agravante:** Si utiliza redes sociales (Ciberacoso) o es tu jefe/profesor, la pena sube a **4 a 8 años**."
+    },
+    {
+        "tema": "Acoso Sexual Callejero",
+        "keywords": [
+            "acoso callejero", "me silbaron", "mañoso en el bus", 
+            "tocamientos indebidos calle", "metio la mano", "piropos groseros"
+        ],
+        "respuesta": "🚌 **Acoso Sexual Callejero:**\n\nRealizar gestos obscenos, tocamientos indebidos, silbidos o insinuaciones sexuales en la vía pública o transporte público ES DELITO.\n\n⚖️ **Pena:** De **2 a 4 años** de cárcel. Si ocurre dentro del bus o combi, la pena es más severa."
+    }
+
 
     # ==================== FAMILIA (ALIMENTOS Y DIVORCIO) ====================
     {
@@ -350,6 +447,58 @@ BASE_CONOCIMIENTO = [
         ],
         "respuesta": "🛒 **Derechos del Consumidor:**\n\nEl proveedor debe tener Libro de Reclamaciones y responder en **15 días hábiles**. Si discriminan (derecho de admisión abusivo), Indecopi pone multas altas."
     },
+
+    {
+        "tema": "Piratería de Software (Ingeniería)",
+        "keywords": [
+            "instalar windows pirata", "vender software pirata", "descargar office crackeado",
+            "usar programas piratas", "vender peliculas piratas", "derechos de autor"
+        ],
+        "respuesta": "💿 **Delitos contra la Propiedad Intelectual:**\n\nEl uso personal a veces pasa desapercibido, pero **vender o distribuir** software/películas piratas es delito.\n\n⚖️ **Pena:** De **2 a 5 años** de cárcel (Art. 217 CP). ¡Cuidado con vender computadoras con software 'crackeado' preinstalado!"
+    },
+    {
+        "tema": "Retención de Títulos (Universidades)",
+        "keywords": [
+            "la universidad retiene mi titulo", "no me dan mi bachiller por deuda", 
+            "colegio retiene libreta", "no me dejan dar examen por no pagar", "retencion de documentos"
+        ],
+        "respuesta": "🎓 **Prohibición de Retener Documentos:**\n\n¡Es Ilegal! Ninguna universidad, instituto o colegio puede retener tus certificados, libretas o diplomas por falta de pago de pensiones.\n\n✅ **Acción:** Puedes denunciar ante **Indecopi**. La institución recibirá una multa fuerte, aunque igual la deuda monetaria seguirá existiendo."
+    },
+    {
+        "tema": "Ley de Protección de Datos (Spam)",
+        "keywords": [
+            "venden mis datos", "llamadas spam", "vender base de datos", 
+            "ley proteccion de datos", "acosan por telefono", "de donde sacaron mi numero"
+        ],
+        "respuesta": "🛡️ **Protección de Datos Personales (Ley 29733):**\n\nVender o compartir bases de datos de personas sin su consentimiento es una infracción muy grave.\n\n💰 **Sanción:** El Ministerio de Justicia impone multas de hasta **100 UIT** a las empresas (o personas) que trafican con tu información personal."
+    },
+    
+    # ==================== PACK EXTRA: SOCIEDAD Y MASCOTAS ====================
+    {
+        "tema": "Maltrato Animal",
+        "keywords": [
+            "maltrato animal", "mataron a mi perro", "envenenaron a mi gato", 
+            "pegan al perro", "ley 30407", "abandono mascota"
+        ],
+        "respuesta": "🐾 **Ley de Protección y Bienestar Animal (Ley 30407):**\n\nEl que abandona o maltrata cruelmente a un animal doméstico comete delito.\n\n⚖️ **Pena:** Hasta **3 años** de cárcel. Si el animal muere, la pena es de **3 a 5 años** de cárcel efectiva."
+    },
+    {
+        "tema": "Acoso Callejero",
+        "keywords": [
+            "acoso callejero", "me silbaron", "mañoso en el bus", "tocamientos indebidos calle", 
+            "metio la mano", "acoso sexual callejero"
+        ],
+        "respuesta": "bus🚌 **Acoso Sexual Callejero (Art. 176-B CP):**\n\nRealizar gestos obscenos, tocamientos indebidos o insinuaciones sexuales en la vía pública o transporte público es delito.\n\n⚖️ **Pena:** De **2 a 4 años** de cárcel (más severo si es en transporte público)."
+    },
+    {
+        "tema": "Uso de Gas Pimienta (Defensa)",
+        "keywords": [
+            "gas pimienta", "es legal el gas pimienta", "usar taser", 
+            "defensa personal", "puedo llevar gas pimienta"
+        ],
+        "respuesta": "🌶️ **Uso de Gas Pimienta:**\n\n**SÍ es legal** portarlo y usarlo, pero SOLO para **Legítima Defensa** ante un ataque inminente.\n\n⚠️ **Ojo:** Debe ser un medio proporcional. Si lo usas para atacar o bromear, cometes delito de Lesiones."
+    },
+
 
     # ==================== SALUDOS Y CRÉDITOS ====================
     {
