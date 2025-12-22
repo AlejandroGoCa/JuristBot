@@ -3,21 +3,38 @@ import time
 import random
 
 # --- CONFIGURACIÓN DE LA PÁGINA ---
-st.set_page_config(page_title="JurisBot AI - Sistema Experto", page_icon="⚖️", layout="centered")
+st.set_page_config(page_title="JurisBot - UNJFSC", page_icon="⚖️", layout="centered")
 
-# --- ESTILOS CSS (Apariencia tipo ChatGPT Profesional) ---
+# --- ESTILOS CSS (Personalizado UNJFSC) ---
 st.markdown("""
     <style>
-    .stChatMessage { padding: 1.2rem; border-radius: 12px; margin-bottom: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-    .stChatMessage[data-testid="stChatMessageUser"] { background-color: #f0f2f6; border-left: 5px solid #2980b9; }
-    .stChatMessage[data-testid="stChatMessageAssistant"] { background-color: #e8f5e9; border-left: 5px solid #27ae60; }
-    h1 { color: #2c3e50; }
+    /* Estilo del Chat */
+    .stChatMessage { padding: 1rem; border-radius: 10px; margin-bottom: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .stChatMessage[data-testid="stChatMessageUser"] { background-color: #f0f2f6; border-left: 5px solid #2c3e50; }
+    .stChatMessage[data-testid="stChatMessageAssistant"] { background-color: #ffebee; border-left: 5px solid #800000; } /* Color Guinda */
+    
+    /* Títulos y Encabezados */
+    h1 { color: #800000; text-align: center; } /* Guinda UNJFSC */
+    h3 { color: #2c3e50; }
+    
+    /* Barra Lateral */
+    [data-testid="stSidebar"] { background-color: #f8f9fa; }
     </style>
 """, unsafe_allow_html=True)
 
 # --- BASE DE CONOCIMIENTO MASIVA (CEREBRO COMPLETO) ---
 BASE_CONOCIMIENTO = [
 
+    # ==================== TEORÍA DEL CURSO (SISTEMAS EXPERTOS) ====================
+    {
+        "tema": "Definición de Sistema Experto",
+        "keywords": [
+            "que es un sistema experto", "que es este bot", "como funciona", 
+            "sistema basado en conocimiento", "inteligencia artificial simbolica",
+            "definicion de sistema experto", "para que sirve este software"
+        ],
+        "respuesta": "🧠 **Definición Técnica:**\n\nSoy un **Sistema Experto**, una rama de la Inteligencia Artificial que emula el razonamiento de un especialista humano (en este caso, un Abogado Penalista).\n\n⚙️ **Mi Arquitectura:**\n1. **Base de Conocimientos:** Hechos y reglas legales (Código Penal/Civil).\n2. **Motor de Inferencia:** El algoritmo que busca y selecciona la mejor respuesta lógica a tu consulta.\n3. **Interfaz:** Este chat por donde nos comunicamos."
+    },
     # ==================== PRIORIDAD 1: EMERGENCIAS Y DELITOS COMUNES ====================
     {
         "tema": "Hallazgo de Arma (Qué hacer)",
@@ -185,6 +202,16 @@ BASE_CONOCIMIENTO = [
     },
 
     # ==================== DELITOS CONTRA VIDA Y CUERPO ====================
+    {
+        "tema": "Homicidio y Asesinato (Resumen General)",
+        "keywords": [
+            "si mato a alguien", "si asesino a alguien", "le quite la vida", "quitar la vida",
+            "que pasa si mato", "pena por matar", "asesinato", "homicidio", 
+            "mate a alguien", "cometer homicidio", "quite la vida a alguien"
+        ],
+        "respuesta": "⚰️ **El Delito de Matar (Diferencias):**\n\nEn Perú, la pena depende del CÓMO:\n\n1. **Homicidio Simple (Art. 106):** Matar sin agravantes (ej: en una pelea). Pena: **6-20 años**.\n2. **Asesinato (Calificado):** Matar con crueldad, veneno, fuego o traición. Pena: **Min. 15 años**.\n3. **Feminicidio:** Matar a una mujer por su género. Pena: **Min. 20 años**.\n4. **Sicariato:** Matar por dinero. Pena: **25 años a Perpetua**."
+    },
+
     {
         "tema": "Homicidio Culposo (Accidentes)",
         "keywords": [
@@ -616,42 +643,57 @@ BASE_CONOCIMIENTO = [
     {
         "tema": "Saludos del Grupo 03",
         "keywords": ["hola", "buenos dias", "buenas", "que tal", "inicio", "holi", "holiwis", "quienes son", "autores"],
-        "respuesta": "👋 **¡Hola! Soy JurisBot Perú (IA Legal)**\n\nProyecto de Inteligencia Artificial desarrollado por estudiantes de Ingeniería de Sistemas de la **UNJFSC**:\n\n👨‍🎓 **Callan Bautista, Giomar**\n👨‍🎓 **Gomez Castillo, Alejandro**\n👨‍🎓 **Tiburcio Shuan, Leonardo**\n👨‍🎓 **Villavicencio Romero, Renzo**\n\n💡 *Estoy capacitado en Derecho Penal, Civil, Laboral y Protección al Consumidor.*"
+        "respuesta": "👋 **¡Hola! Soy JurisBot - UNJFSC**\n\nSistema Experto Legal desarrollado por el **Grupo 03** (VII Ciclo - Ingeniería de Sistemas):\n\n👨‍🎓 **Callan Bautista, Giomar**\n👨‍🎓 **Gomez Castillo, Alejandro**\n👨‍🎓 **Tiburcio Shuan, Leonardo**\n👨‍🎓 **Villavicencio Romero, Renzo**"
     }
 ]
 
-# --- LÓGICA DE BÚSQUEDA "INTELIGENTE" ---
 def buscar_respuesta_simulada(pregunta_usuario):
     pregunta_usuario = pregunta_usuario.lower()
     
     # Simulación de IA pensando (fake loading)
-    with st.spinner('🧠 Analizando jurisprudencia y leyes peruanas...'):
-        time.sleep(1.5) # Retraso de 1.5 segundos para parecer que "piensa"
+    with st.spinner('🧠 Procesando reglas de inferencia...'):
+        time.sleep(1) # Retraso para efecto
     
-    # Algoritmo de búsqueda jerárquica
+    # Algoritmo de búsqueda
     for tema in BASE_CONOCIMIENTO:
         for palabra in tema["keywords"]:
             if palabra in pregunta_usuario:
                 return tema["respuesta"]
     
-    # Respuesta por defecto si no entiende
-    return "🤖 **Lo siento.** Mi base de datos no reconoce ese término exacto.\n\nIntenta reformular tu pregunta usando términos legales comunes como: *'robo', 'despido', 'alimentos', 'divorcio', 'extorsión' o 'accidente'*."
+    # Respuesta por defecto
+    return "🤖 **No se encontró regla coincidente.**\n\nMi base de conocimiento no tiene registrada esa entrada. Por favor, intenta usar términos jurídicos más específicos como: *'robo', 'despido', 'alimentos', 'divorcio', 'sistema experto'*."
 
-# --- INTERFAZ GRÁFICA ---
+# --- INTERFAZ GRÁFICA (BARRA LATERAL UNIVERSITARIA) ---
 with st.sidebar:
-    st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Coat_of_arms_of_Peru_%28State_flag%29_-_variant.svg/1200px-Coat_of_arms_of_Peru_%28State_flag%29_-_variant.svg.png", width=100)
-    st.title("JurisBot AI")
-    st.write("**Versión:** 3.0 (Final)")
-    st.success("🟢 Sistema Operativo")
-    st.info("Este sistema utiliza procesamiento de lenguaje natural para asistir en consultas de Derecho Peruano.")
+    # Logo de la UNJFSC (Usamos una URL pública estable)
+    st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Escudo_UNJFSC.png/600px-Escudo_UNJFSC.png", width=150)
     
-    st.write("---")
-    if st.button("🔄 Reiniciar Motor de IA"):
+    st.markdown("<h1 style='text-align: center; font-size: 24px;'>JurisBot AI</h1>", unsafe_allow_html=True)
+    st.markdown("---")
+    
+    # Datos del Curso y Grupo
+    st.markdown("📚 **Curso:** Sistemas Expertos")
+    st.markdown("🎓 **Ciclo:** VII - Ing. de Sistemas")
+    st.markdown("🏫 **Universidad:** UNJFSC")
+    
+    st.markdown("---")
+    st.markdown("👥 **Grupo 03:**")
+    st.caption("• Callan Bautista, Giomar")
+    st.caption("• Gomez Castillo, Alejandro")
+    st.caption("• Tiburcio Shuan, Leonardo")
+    st.caption("• Villavicencio Romero, Renzo")
+    
+    st.markdown("---")
+    st.info("Sistema basado en reglas de inferencia para el Código Penal Peruano.")
+    
+    if st.button("🔄 Reiniciar Sistema"):
         st.cache_data.clear()
         st.rerun()
 
-st.title("⚖️ JurisBot Perú: Sistema Experto")
-st.markdown("*Asistente Legal Automatizado basado en el Código Penal y Civil del Perú.*")
+# --- CUERPO PRINCIPAL ---
+st.title("⚖️ JurisBot: Sistema Experto Legal")
+st.markdown("#### *Universidad Nacional José Faustino Sánchez Carrión*")
+st.success("🟢 Motor de Inferencia: **ACTIVO**")
 
 # Inicializar historial
 if "mensajes" not in st.session_state:
@@ -663,13 +705,13 @@ for mensaje in st.session_state.mensajes:
         st.markdown(mensaje["content"])
 
 # Input de usuario
-if prompt := st.chat_input("Escribe tu consulta legal (Ej: ¿Qué pasa si manejo ebrio?)"):
+if prompt := st.chat_input("Escribe tu consulta legal (Ej: ¿Qué es un sistema experto?)"):
     # 1. Mostrar usuario
     st.session_state.mensajes.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.markdown(prompt)
 
-    # 2. Buscar respuesta (con efecto de carga)
+    # 2. Buscar respuesta
     respuesta_bot = buscar_respuesta_simulada(prompt)
 
     # 3. Mostrar respuesta bot
