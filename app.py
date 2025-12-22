@@ -44,8 +44,35 @@ BASE_CONOCIMIENTO = [
         ],
         "respuesta": "🎭 **Suplantación de Identidad:**\n\nDepende de dónde lo hagas, pero en ambos casos es **DELITO**:\n\n1. **En Internet (Ley 30096):** Si creas un perfil falso o usas fotos ajenas para causar perjuicio (moral o económico). Pena: **3 a 5 años**.\n2. **En la Vida Real (Art. 438 CP):** Si usas el DNI de otro o mientes sobre tu nombre ante una autoridad. Pena: **2 a 4 años**."
     },
+    {
+        "tema": "Legítima Defensa (Defensa Propia)",
+        "keywords": [
+            "puedo matar al ladron", "defensa propia", "si entra a mi casa lo mato", 
+            "legitima defensa", "me defendi", "uso de arma defensa"
+        ],
+        "respuesta": "🛡️ **Legítima Defensa (Art. 20 CP):**\n\nNo vas a la cárcel si te defiendes, PERO debes cumplir 3 requisitos:\n1. **Agresión Ilegítima:** Te están atacando real y actualmente.\n2. **Necesidad Racional del Medio:** Usas lo que tienes a mano para salvar tu vida (proporcionalidad razonable).\n3. **Falta de Provocación:** Tú no empezaste la pelea.\n\n⚠️ **Cuidado:** Si el ladrón ya está huyendo o rendido y le disparas por la espalda, **YA NO es defensa**, es Homicidio."
+    },
+
+    {
+        "tema": "Denuncia Falsas (Calumniosa)",
+        "keywords": [
+            "me denunciaron falsamente", "denuncia falsa", "mentir en la comisaria", 
+            "acusacion falsa", "me culpan de algo que no hice", "denuncia por despecho"
+        ],
+        "respuesta": "🤥 **Denuncia Calumniosa (Art. 402 CP):**\n\nDenunciar a alguien ante la autoridad (Policía/Fiscalía) sabiendo que es inocente o simular pruebas en su contra, es DELITO.\n\n⚖️ **Pena:** Hasta **3 años** de cárcel y pago de indemnización. La ley castiga el uso de la justicia para venganzas personales."
+    },
 
     # ==================== DELITOS INFORMÁTICOS (PACK COMPLETO) ====================
+    
+    {
+        "tema": "Copiar: ¿Delito Informático o Plagio?",
+        "keywords": [
+            "copiar", "copie", "es delito copiar", "copia", "copiando", 
+            "que pasa si copio", "copiar es legal"
+        ],
+        "respuesta": "📝 **Depende de QUÉ estés copiando:**\n\n1. **Copiar Archivos/Base de Datos:** Si sustraes información digital de una empresa o persona, es **Delito Informático** (Pena: 3 a 8 años).\n2. **Copiar Tesis/Libros (Plagio):** Si copias una obra intelectual y dices que es tuya, es **Delito contra los Derechos de Autor** (Pena: 4 a 8 años).\n3. **Copiar en un Examen:** Es una falta ética grave (te expulsan de la universidad), pero no suele ser cárcel a menos que falsifiques documentos o suplantes identidad."
+    },
+
     {
         "tema": "Robo de Información / Hackeo",
         "keywords": [
@@ -200,13 +227,13 @@ BASE_CONOCIMIENTO = [
     },
 
     {
-        "tema": "Homicidio y Asesinato (General)",
+        "tema": "Tipos de Homicidio (Resumen General)",
         "keywords": [
-            "si mato a alguien", "que pasa si asesino", "pena por asesinato" ,"matar" 
-            "asesinar a una persona", "homicidio simple", "homicidio calificado",
-            "matar a alguien", "asesinato"
+            "matar", "asesinar", "que pasa si mato", "homicidio", "asesinato",
+            "diferencia homicidio asesinato", "tipos de muerte", "penas por matar",
+            "quite la vida", "matar a alguien"
         ],
-        "respuesta": "⚰️ **Homicidio y Asesinato (Diferencia):**\n\n* **Homicidio Simple (Art. 106):** Matar a otro sin agravantes (ej: en una pelea). Pena: **6 a 20 años**.\n* **Asesinato (Homicidio Calificado - Art. 108):** Si matas con crueldad, por lucro, por placer, con veneno o alevosía (traición). Pena: **No menor de 15 años**."
+        "respuesta": "⚰️ **El Delito de Matar (Diferencias):**\n\nEn Perú, la pena por quitar la vida depende del CÓMO y el PORQUÉ:\n\n1. **Homicidio Simple:** Matar sin agravantes (ej: en una pelea). Pena: **6-20 años**.\n2. **Asesinato (Calificado):** Matar con gran crueldad, veneno, fuego o traición. Pena: **Min. 15 años**.\n3. **Feminicidio:** Matar a una mujer por su género/machismo. Pena: **Min. 20 años**.\n4. **Sicariato:** Matar por dinero (encargo). Pena: **25 años a Perpetua**.\n5. **Homicidio Culposo:** Matar por accidente/negligencia (ej: atropello). Pena: **Menor**."
     },
 
     {
@@ -497,6 +524,91 @@ BASE_CONOCIMIENTO = [
             "defensa personal", "puedo llevar gas pimienta"
         ],
         "respuesta": "🌶️ **Uso de Gas Pimienta:**\n\n**SÍ es legal** portarlo y usarlo, pero SOLO para **Legítima Defensa** ante un ataque inminente.\n\n⚠️ **Ojo:** Debe ser un medio proporcional. Si lo usas para atacar o bromear, cometes delito de Lesiones."
+    },
+
+    # ==================== DELITOS DE DROGAS (TID) ====================
+    {
+        "tema": "Drogas: Consumo vs Tráfico (Resumen)",
+        "keywords": [
+            "drogas", "ley de drogas", "es delito drogarse", "pena por drogas", 
+            "narcotrafico", "tid", "trafico ilicito de drogas", "vender droga"
+        ],
+        "respuesta": "💊 **Ley de Drogas (Art. 296 y ss. CP):**\n\nEn Perú, la ley diferencia claramente:\n\n1. **Consumo:** NO es delito si es para uso personal y no excede los límites legales (Art. 299).\n2. **Microcomercialización:** Vender en pequeñas cantidades ('paqueteros'). Pena: **3 a 7 años**.\n3. **Tráfico Ilícito (TID):** Producir, transportar o vender en grandes cantidades. Pena: **8 a 15 años** (o más si eres cabecilla)."
+    },
+    {
+        "tema": "Límites Legales de Posesión (Consumo)",
+        "keywords": [
+            "cuanta droga puedo tener", "cuanta marihuana es legal", "limite posesion", 
+            "me encontraron un paco", "consumo personal", "tengo 5 gramos"
+        ],
+        "respuesta": "⚖️ **Posesión no Punible (Art. 299 CP):**\n\nNo es delito si tienes droga para tu **consumo inmediato** y no excedes estos pesos:\n\n* 🌿 **Marihuana:** Hasta **8 gramos**.\n* 🍚 **Cocaína:** Hasta **2 gramos**.\n* 🚬 **Pasta Básica (PBC):** Hasta **5 gramos**.\n* 💊 **Éxtasis:** Hasta **250 mg**.\n\n⚠️ **Ojo:** Si tienes MÁS de eso, o tienes dos tipos de drogas diferentes a la vez, se presume que es para venta y **vas preso**."
+    },
+    {
+        "tema": "Microcomercialización (Paqueteros)",
+        "keywords": [
+            "microcomercializacion", "vendedor minorista", "dealer", "paquetero", 
+            "vender poquitos", "vender ketes", "vender pacos"
+        ],
+        "respuesta": "📦 **Microcomercialización (Art. 298 CP):**\n\nEl que vende drogas en pequeñas cantidades (aunque sea para 'pagar su vicio').\n\n⚖️ **Pena:** Privativa de libertad de **3 a 7 años**.\n⚠️ **Agravante:** Si vendes cerca de un colegio o a menores de edad, la pena sube a **6 a 10 años**."
+    },
+    {
+        "tema": "Suministro Indebido (Dopar)",
+        "keywords": [
+            "pepeo", "pepear", "dopar a alguien", "poner droga en bebida", 
+            "suministro indebido", "drogar para robar"
+        ],
+        "respuesta": "🍹 **Suministro Indebido / 'Pepeo' (Art. 302 CP):**\n\nAdministrar drogas o fármacos a alguien sin su consentimiento (para robarle o violarle).\n\n⚖️ **Pena:** Si solo es suministrar, pena media. Pero si se usa para robar (**Robo Agravado**) o violar, las penas superan los **20 años**."
+    },
+    # ==================== REDES SOCIALES Y HONOR (FUNAS) ====================
+    {
+        "tema": "Difamación y 'Funas' en Redes",
+        "keywords": [
+            "me funaron", "estan hablando mal de mi", "difamacion", "calumnia", 
+            "injuria", "me insultaron en facebook", "publicaron cosas falsas de mi"
+        ],
+        "respuesta": "🗣️ **Delitos contra el Honor (La 'Funa'):**\n\nInsultar o mentir sobre alguien NO es libertad de expresión:\n\n1. **Injuria:** Ofender o insultar (Servicio Comunitario).\n2. **Calumnia:** Acusar falsamente de un delito (ej: decirle 'ladrón' sin pruebas). Pena: Multa.\n3. **Difamación (La más grave):** Difundir la ofensa ante varias personas (Redes Sociales/Prensa). \n⚖️ **Pena:** **1 a 3 años de cárcel** y pago de reparación civil."
+    },
+    {
+        "tema": "Hacer Memes de Alguien",
+        "keywords": [
+            "hicieron un meme mio", "usan mi foto para memes", "meme ofensivo", 
+            "burla en redes", "derecho a la imagen"
+        ],
+        "respuesta": "🖼️ **Derecho a la Imagen (Art. 15 CC):**\n\nNadie puede usar tu imagen (foto/video) sin tu permiso, y menos para burlarse.\n\n✅ **Acción:** Si hacen un meme ofensivo con tu cara, puedes demandar por la vía civil una **Indemnización por Daños y Perjuicios** (dinero), además de exigir que borren la publicación."
+    },
+    # ==================== ACADÉMICO Y UNIVERSIDAD ====================
+    {
+        "tema": "Plagio de Tesis / Tareas",
+        "keywords": [
+            "copie mi tesis", "plagio", "turnitin", "copiar tarea", 
+            "comprar tesis", "plagio indecopi", "derecho de autor tesis"
+        ],
+        "respuesta": "📚 **Plagio (Delito contra la Autoría - Art. 219 CP):**\n\nCopiar una obra (tesis, libro, monografía) y hacerla pasar como tuya es DELITO.\n\n⚖️ **Pena:** De **4 a 8 años de cárcel**. \n⚠️ **En la U:** Además de la cárcel, la universidad te anula el título profesional y te expulsa."
+    },
+    # ==================== CURIOSIDADES LEGALES ====================
+    {
+        "tema": "Casarse con Primos",
+        "keywords": [
+            "me puedo casar con mi primo", "es delito estar con mi prima", 
+            "matrimonio entre primos", "incesto peru"
+        ],
+        "respuesta": "💍 **¿Matrimonio entre Primos?:**\n\n* **Primos Hermanos (Grado 4):** El Código Civil **PROHÍBE** el matrimonio entre consanguíneos en línea colateral hasta el tercer grado (tíos-sobrinos). Los primos hermanos están en 4to grado, así que **SÍ es legal casarse**, aunque genéticamente no es recomendable.\n* **Incesto:** Solo es delito si es violación."
+    },
+    {
+        "tema": "Cambio de Firma",
+        "keywords": [
+            "cambiar mi firma", "mi firma es fea", "quiero cambiar de firma", 
+            "cambiar dni firma"
+        ],
+        "respuesta": "✍️ **Cambio de Firma:**\n\nSí puedes cambiar tu firma. Debes tramitar un **Duplicado/Renovación de DNI** en RENIEC e indicar que quieres actualizar la firma.\n\n⚠️ **Ojo:** Una vez cambiada, tendrás que actualizarla en bancos, notarías y contratos, porque tu firma anterior dejará de ser válida."
+    },
+    {
+        "tema": "Discriminación en Discotecas",
+        "keywords": [
+            "no me dejaron entrar por zapatillas", "discriminacion discoteca", 
+            "reservado el derecho de admision", "racismo puerta"
+        ],
+        "respuesta": "🚫 **Discriminación (Art. 323 CP):**\n\nEl cartel 'Nos reservamos el derecho de admisión' NO permite discriminar por ropa, raza u orientación sexual. Si te impiden entrar arbitrariamente, puedes llamar a la policía, pedir el Libro de Reclamaciones y denunciar a INDECOPI (Multas de hasta 450 UIT)."
     },
 
 
