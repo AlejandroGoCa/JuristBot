@@ -260,7 +260,7 @@ BASE_CONOCIMIENTO = [
         ],
         "respuesta": "⚠️ **El Acoso es Delito (Tipos):**\n\nEn Perú, el acoso se castiga diferente según el contexto:\n\n1. **Acoso Sexual (Art. 176-B):** Si hay frases, tocamientos o propuestas de índole sexual no deseadas.\n2. **Stalking (Art. 151-A):** Si te vigilan, persiguen o buscan contacto insistentemente (sin fin sexual explícito, solo por obsesión/molestar).\n3. **Acoso Laboral (Hostilidad):** Si ocurre en el trabajo para aburrirte o perjudicarte.\n4. **Ciberacoso:** Si ocurre por redes sociales (agravante)."
     },
-    
+
     {
         "tema": "Acoso / Stalking (Persecución)",
         "keywords": [
@@ -284,7 +284,7 @@ BASE_CONOCIMIENTO = [
             "tocamientos indebidos calle", "metio la mano", "piropos groseros"
         ],
         "respuesta": "🚌 **Acoso Sexual Callejero:**\n\nRealizar gestos obscenos, tocamientos indebidos, silbidos o insinuaciones sexuales en la vía pública o transporte público ES DELITO.\n\n⚖️ **Pena:** De **2 a 4 años** de cárcel. Si ocurre dentro del bus o combi, la pena es más severa."
-    }
+    },
 
 
     # ==================== FAMILIA (ALIMENTOS Y DIVORCIO) ====================
