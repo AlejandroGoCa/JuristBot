@@ -724,7 +724,7 @@ BASE_CONOCIMIENTO = [
     },
     {
         "tema": "Saludos del Grupo 03",
-        "keywords": ["hola", "buenos dias", "buenas", "que tal", "inicio", "quienes son", "autores", "creadores"],
+        "keywords": ["hola", "buenos dias", "buenas", "que tal", "inicio", "holi", "Holiwis", "quienes son", "autores", "creadores"],
         "respuesta": "👋 **¡Hola! Soy JurisBot Perú (IA Legal)**\n\nProyecto de Inteligencia Artificial desarrollado por estudiantes de Ingeniería de Sistemas de la **UNJFSC**:\n\n👨‍🎓 **Callan Bautista, Giomar**\n👨‍🎓 **Gomez Castillo, Alejandro**\n👨‍🎓 **Tiburcio Shuan, Leonardo**\n👨‍🎓 **Villavicencio Romero, Renzo**\n\n💡 *Estoy capacitado en Derecho Penal, Civil, Laboral y Protección al Consumidor. ¡Hazme una pregunta!*"
     }
 ]
