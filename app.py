@@ -20,8 +20,12 @@ BASE_CONOCIMIENTO = [
 
     {
         "tema": "Retraso / Olvido de Pensión",
-        "keywords": ["no deposite", "olvide pagar", "se me paso pagar", "no pague", "retraso pension", "me olvide la pension", "por accidente no pague"],
-        "respuesta": "🏦 **Retraso en Pensión de Alimentos:**\n\nSi fue un error o 'accidente' y no depositaste a tiempo:\n1. **Deposita inmediatamente** (incluyendo los intereses legales).\n2. Guarda el voucher.\n\n⚠️ **Ojo:** Si esto se vuelve constante, la madre puede denunciarte por **Omisión a la Asistencia Familiar** y podrías ir a la cárcel, aunque digas que fue 'sin querer'."
+        "keywords": [
+            "olvide pagar", "olvide paga", "olvido pagar", "se me paso pagar", 
+            "no deposite", "no pague", "no paga", 
+            "retraso pension", "accidente con la pension", "accidente pension"
+        ],
+        "respuesta": "🏦 **Retraso en Pensión de Alimentos:**\n\nSi fue un error o 'accidente' y no depositaste a tiempo:\n1. **Deposita inmediatamente** (incluyendo los intereses legales).\n2. Guarda el voucher.\n\n⚠️ **Ojo:** Si esto se vuelve constante, te pueden denunciar por **Omisión a la Asistencia Familiar** y podrías ir a la cárcel, sin importar que haya sido un 'olvido'."
     },
 
     # ==================== DELITOS CONTRA LA VIDA Y CUERPO ====================
@@ -30,7 +34,7 @@ BASE_CONOCIMIENTO = [
         "keywords": ["culposo", "accidente", "atropello", "atropellar", "imprudencia", "negligencia", "sin querer", "casualidad", "choque"],
         "respuesta": "🚗 **Homicidio Culposo (Art. 111 CP):**\n\nSi causas la muerte de alguien por negligencia o accidente de tránsito (sin intención de matar), la pena es privativa de libertad no mayor de **2 años**.\n\n⚠️ **Agravante:** Si el conductor huye o estaba ebrio, la pena sube a entre **4 y 8 años**."
     },
-    
+
     {
         "tema": "Feminicidio",
         "keywords": ["feminicidio", "mato a su mujer", "mato a su pareja", "violencia de genero", "ex pareja"],
