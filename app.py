@@ -4,22 +4,43 @@ import random
 import os
 
 # --- CONFIGURACIÓN DE LA PÁGINA ---
-st.set_page_config(page_title="JurisBot - UNJFSC", page_icon="⚖️", layout="centered")
+st.set_page_config(
+    page_title="JurisBot - UNJFSC", 
+    page_icon="⚖️", 
+    layout="centered",
+    initial_sidebar_state="expanded"
+)
 
-# --- ESTILOS CSS (Personalizado UNJFSC) ---
+# --- ESTILOS CSS (DISEÑO PREMIUM) ---
 st.markdown("""
     <style>
-    /* Estilo del Chat */
-    .stChatMessage { padding: 1rem; border-radius: 10px; margin-bottom: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-    .stChatMessage[data-testid="stChatMessageUser"] { background-color: #f0f2f6; border-left: 5px solid #2c3e50; }
-    .stChatMessage[data-testid="stChatMessageAssistant"] { background-color: #ffebee; border-left: 5px solid #800000; } /* Color Guinda */
+    /* Fondo del chat más limpio */
+    .stChatMessage { 
+        padding: 1.5rem; 
+        border-radius: 15px; 
+        margin-bottom: 15px; 
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+    }
+    /* Mensaje del Usuario (Azul Oscuro profesional) */
+    .stChatMessage[data-testid="stChatMessageUser"] { 
+        background-color: #e3f2fd; 
+        border-left: 5px solid #1565c0; 
+    }
+    /* Mensaje del Bot (Guinda UNJFSC suave) */
+    .stChatMessage[data-testid="stChatMessageAssistant"] { 
+        background-color: #fce4ec; 
+        border-left: 5px solid #880e4f; 
+    }
     
-    /* Títulos y Encabezados */
-    h1 { color: #800000; text-align: center; } /* Guinda UNJFSC */
-    h3 { color: #2c3e50; }
+    /* Títulos centrados */
+    h1 { color: #880e4f; text-align: center; font-family: 'Helvetica', sans-serif; }
     
-    /* Barra Lateral */
-    [data-testid="stSidebar"] { background-color: #f8f9fa; }
+    /* Ajuste de la imagen del sidebar para que no se vea pegada */
+    [data-testid="stSidebar"] img {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.25)); /* Sombra al logo */
+    }
     </style>
 """, unsafe_allow_html=True)
 
@@ -665,37 +686,75 @@ def buscar_respuesta_simulada(pregunta_usuario):
     return "🤖 **No se encontró regla coincidente.**\n\nMi base de conocimiento no tiene registrada esa entrada. Por favor, intenta usar términos jurídicos más específicos como: *'robo', 'despido', 'alimentos', 'divorcio', 'sistema experto'*."
 
 # --- INTERFAZ GRÁFICA (BARRA LATERAL UNIVERSITARIA) ---
-# --- INTERFAZ GRÁFICA (BARRA LATERAL UNIVERSITARIA) ---
 with st.sidebar:
-    # TRUCO DE INGENIERO: Esto encuentra la ruta exacta de tu carpeta, esté donde esté.
-    ruta_carpeta = os.path.dirname(os.path.abspath(__file__))
-    ruta_imagen = os.path.join(ruta_carpeta, "logo.png")
+    # 1. LOGO CENTRADO (Truco de columnas)
+    col1, col2, col3 = st.columns([1, 2, 1]) 
+    with col2:
+        # Intenta cargar local, si no, usa internet
+        ruta_carpeta = os.path.dirname(os.path.abspath(__file__))
+        ruta_imagen = os.path.join(ruta_carpeta, "logo.png")
+        if os.path.exists(ruta_imagen):
+            st.image(ruta_imagen, width=130)
+        else:
+            st.image("https://upload.wikimedia.org/wikipedia/commons/c/ca/Escudo_UNJFSC.png", width=130)
 
-    # Verificamos si existe antes de mostrarla para evitar errores feos
-    if os.path.exists(ruta_imagen):
-        st.image(ruta_imagen, width=150)
-    else:
-        # Si falla el local, usa el de internet como respaldo automático
-        st.image("https://upload.wikimedia.org/wikipedia/commons/c/ca/Escudo_UNJFSC.png", width=150)
+    # 2. TÍTULO Y ESTADO DEL SISTEMA
+    st.markdown("<h2 style='text-align: center; color: #2c3e50; margin-top: -15px;'>JurisBot AI</h2>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align: center; font-size: 12px; color: gray;'>V 3.0 | Build 2025</p>", unsafe_allow_html=True)
     
-    st.markdown("<h1 style='text-align: center; font-size: 24px;'>JurisBot AI</h1>", unsafe_allow_html=True)
-    st.markdown("---")
+    # Caja de estado (Verde = Activo)
+    st.success("🟢 **Sistema Operativo: ONLINE**")
     
-    # Datos del Curso y Grupo
-    st.markdown("📚 **Curso:** Sistemas Expertos")
-    st.markdown("🎓 **Ciclo:** VII - Ing. de Sistemas")
-    st.markdown("🏫 **Universidad:** UNJFSC")
+    st.divider() # Línea separadora elegante
+
+    # 3. FICHA TÉCNICA DEL PROYECTO
+    with st.expander("📂 **Información del Proyecto**", expanded=True):
+        st.markdown("**🏛️ Universidad:** UNJFSC")
+        st.markdown("**📚 Curso:** Sistemas Expertos")
+        st.markdown("**🎓 Ciclo:** VII - Ing. de Sistemas")
+
+    # 4. CRÉDITOS DEL EQUIPO (Estilo Lista Limpia)
+    st.markdown("### 👥 **Equipo de Desarrollo (Grupo 03)**")
+    st.info("""
+    👨‍💻 **Callan Bautista, Giomar**
+    👨‍💻 **Gomez Castillo, Alejandro**
+    👨‍💻 **Tiburcio Shuan, Leonardo**
+    👨‍💻 **Villavicencio Romero, Renzo**
+    """)
+
+    st.divider()
     
-    st.markdown("---")
-    st.markdown("👥 **Grupo 03:**")
-    st.caption("• Callan Bautista, Giomar")
-    st.caption("• Gomez Castillo, Alejandro")
-    st.caption("• Tiburcio Shuan, Leonardo")
-    st.caption("• Villavicencio Romero, Renzo")
-    
-    st.markdown("---")
-    st.info("Sistema basado en reglas de inferencia para el Código Penal Peruano.")
-    
-    if st.button("🔄 Reiniciar Sistema"):
+    # Botón de reinicio (más discreto)
+    if st.button("🔄 Reiniciar Sesión", use_container_width=True):
         st.cache_data.clear()
         st.rerun()
+
+# --- CUERPO PRINCIPAL ---
+
+# Título Principal con Subtítulo Académico
+st.markdown("<h1 style='font-size: 40px;'>⚖️ JurisBot Perú</h1>", unsafe_allow_html=True)
+st.markdown("<h4 style='text-align: center; color: gray; font-style: italic;'>Sistema Experto basado en Reglas de Inferencia Legal</h4>", unsafe_allow_html=True)
+st.markdown("---")
+
+# Inicializar historial (MANTENER IGUAL)
+if "mensajes" not in st.session_state:
+    st.session_state.mensajes = []
+
+# Mostrar historial con los nuevos estilos CSS
+for mensaje in st.session_state.mensajes:
+    with st.chat_message(mensaje["role"]):
+        st.markdown(mensaje["content"])
+
+# Input de usuario
+if prompt := st.chat_input("Escribe tu caso aquí... (Ej: Me robaron el celular)"):
+    # (MANTENER TU LÓGICA DE CHAT IGUAL AQUÍ)
+    st.session_state.mensajes.append({"role": "user", "content": prompt})
+    with st.chat_message("user"):
+        st.markdown(prompt)
+
+    # Buscar respuesta (Asegúrate de que la función buscar_respuesta_simulada exista arriba)
+    respuesta_bot = buscar_respuesta_simulada(prompt)
+
+    st.session_state.mensajes.append({"role": "assistant", "content": respuesta_bot})
+    with st.chat_message("assistant"):
+        st.markdown(respuesta_bot)
