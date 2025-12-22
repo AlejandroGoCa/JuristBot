@@ -1,6 +1,7 @@
 import streamlit as st
 import time
 import random
+import os
 
 # --- CONFIGURACIÓN DE LA PÁGINA ---
 st.set_page_config(page_title="JurisBot - UNJFSC", page_icon="⚖️", layout="centered")
@@ -664,9 +665,18 @@ def buscar_respuesta_simulada(pregunta_usuario):
     return "🤖 **No se encontró regla coincidente.**\n\nMi base de conocimiento no tiene registrada esa entrada. Por favor, intenta usar términos jurídicos más específicos como: *'robo', 'despido', 'alimentos', 'divorcio', 'sistema experto'*."
 
 # --- INTERFAZ GRÁFICA (BARRA LATERAL UNIVERSITARIA) ---
+# --- INTERFAZ GRÁFICA (BARRA LATERAL UNIVERSITARIA) ---
 with st.sidebar:
-    # Logo de la UNJFSC (Usamos una URL pública estable)
-    st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Escudo_UNJFSC.png/600px-Escudo_UNJFSC.png", width=150)
+    # TRUCO DE INGENIERO: Esto encuentra la ruta exacta de tu carpeta, esté donde esté.
+    ruta_carpeta = os.path.dirname(os.path.abspath(__file__))
+    ruta_imagen = os.path.join(ruta_carpeta, "logo.png")
+
+    # Verificamos si existe antes de mostrarla para evitar errores feos
+    if os.path.exists(ruta_imagen):
+        st.image(ruta_imagen, width=150)
+    else:
+        # Si falla el local, usa el de internet como respaldo automático
+        st.image("https://upload.wikimedia.org/wikipedia/commons/c/ca/Escudo_UNJFSC.png", width=150)
     
     st.markdown("<h1 style='text-align: center; font-size: 24px;'>JurisBot AI</h1>", unsafe_allow_html=True)
     st.markdown("---")
@@ -689,32 +699,3 @@ with st.sidebar:
     if st.button("🔄 Reiniciar Sistema"):
         st.cache_data.clear()
         st.rerun()
-
-# --- CUERPO PRINCIPAL ---
-st.title("⚖️ JurisBot: Sistema Experto Legal")
-st.markdown("#### *Universidad Nacional José Faustino Sánchez Carrión*")
-st.success("🟢 Motor de Inferencia: **ACTIVO**")
-
-# Inicializar historial
-if "mensajes" not in st.session_state:
-    st.session_state.mensajes = []
-
-# Mostrar historial
-for mensaje in st.session_state.mensajes:
-    with st.chat_message(mensaje["role"]):
-        st.markdown(mensaje["content"])
-
-# Input de usuario
-if prompt := st.chat_input("Escribe tu consulta legal (Ej: ¿Qué es un sistema experto?)"):
-    # 1. Mostrar usuario
-    st.session_state.mensajes.append({"role": "user", "content": prompt})
-    with st.chat_message("user"):
-        st.markdown(prompt)
-
-    # 2. Buscar respuesta
-    respuesta_bot = buscar_respuesta_simulada(prompt)
-
-    # 3. Mostrar respuesta bot
-    st.session_state.mensajes.append({"role": "assistant", "content": respuesta_bot})
-    with st.chat_message("assistant"):
-        st.markdown(respuesta_bot)
